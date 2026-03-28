@@ -28,6 +28,19 @@
   font-family: 'Open+Sans', sans-serif !important; /* Forces your font choice */
   font-style: normal !important;               /* Forces italics to disappear */                   /* Sets your global color */
 }
+  <style>
+  /* This forces EVERY element to drop its gradient backgrounds */
+  * {
+    background-image: none !important;
+    background: transparent !important;
+  }
+
+  /* Specifically target common slider class names just in case */
+  .slide, .bg, .slider, .carousel-item {
+    background-image: none !important;
+    background: transparent !important;
+  }
+</style>
 body{
   background:#020204;
   font-family:'Open Sans',sans-serif;
