@@ -45,6 +45,20 @@ body{
   position:relative;overflow:hidden;
   box-shadow:0 50px 150px rgba(0,0,0,0.9),0 0 0 1px var(--border);
 }
+  /* This forces the logo to stay in one spot while sliders move underneath */
+.main-logo {
+    position: fixed;   /* Keeps it on screen for all 13 slides */
+    top: 20px;         /* 20px from top */
+    right: 20px;       /* 20px from right - looks professional */
+    z-index: 9999;     /* Keeps it ABOVE all slider layers */
+    width: 80px;       /* Adjust size as needed */
+    pointer-events: none; /* Allows you to still click buttons behind the logo */
+}
+
+.main-logo img {
+    width: 100%;
+    height: auto;
+}
 .slide{
   position:absolute;inset:0;
   opacity:0;pointer-events:none;
@@ -430,6 +444,11 @@ body{
 </head>
 <body>
 <div id="stage">
+  
+  <div class="main-logo">
+    <!-- Replace 'logo.png' with your actual filename -->
+    <img src="Logo Placeholder.png" alt="Logo">
+</div>
 
 <!-- ═══ S1 COVER ═══ -->
 <div class="slide dk active" id="s1">
